@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Gil Chat: </h1>
+    <%= render 'form', message: @message %>
+    <ul>
+      <p>previous messages: </p>
+      <% Message.all.each do |message| %>
+      <li><%= message.message %></li>
+      <% end %>
+    </ul>
+  </body>
+</html>
