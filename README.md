@@ -1,24 +1,20 @@
 # README
+Gil Chat is a simple chatroom built using rails.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Messages are stored in a "messages" table.
 
-Things you may want to cover:
+Using postgres LISTEN/NOTIFY new messages are rendered.
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
+* Ruby 2.6.2
+* Rails 6.0.1
 
 * Database creation
+$ rails db:create
+$ rails db:migrate
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+
 
 * ...
