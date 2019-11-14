@@ -15,3 +15,9 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+var ChatLog = require("./ChatLog.js")
+
+#(function (){
+  new ChatLog($('.chat'))
+})

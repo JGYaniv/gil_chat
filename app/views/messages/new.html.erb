@@ -5,13 +5,21 @@
     <title></title>
   </head>
   <body>
-    <h1>Gil Chat: </h1>
-    <%= render 'form', message: @message %>
-    <ul>
-      <p>previous messages: </p>
-      <% Message.all.each do |message| %>
-      <li><%= message.message %></li>
-      <% end %>
-    </ul>
+    <div class="chat">
+      <h1>Gil Chat: </h1>
+
+      <form class="" action="<%= messages_url %>" method="POST">
+        <input type="hidden" name="authenticity_token" value=" <%=form_authenticity_token %>">
+        <textarea name="message[message]" rows="8" cols="80"></textarea>
+        <input type="submit" value="send">
+      </form>
+
+      <ul id="message-list">
+        <p>previous messages: </p>
+        <% Message.all.each do |message| %>
+          <li><%= message.message %></li>
+        <% end %>
+      </ul>
+    </div>
   </body>
 </html>
