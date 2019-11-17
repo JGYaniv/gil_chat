@@ -9,12 +9,13 @@ ChatLog.prototype.submitMessage = function(e) {
   $.ajax({
     method: "POST",
     url: "/messages",
-    // dataType: "json",
+    dataType: "json",
     data: this.$form.serialize(),
     success: function(message){
       var $message = $('<li>').text(`${message.created_at}: ${message.message}`);
       this.$messages.append($message);
     }.bind(this)
+    debugger
   });
 };
 
