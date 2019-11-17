@@ -5,10 +5,9 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
-    # @message.save
     if @message.save
       respond_to do |format|
-        # format.html { redirect_to root_url }
+        format.html { redirect_to root_url }
         format.json { render json: @message }
       end
     end

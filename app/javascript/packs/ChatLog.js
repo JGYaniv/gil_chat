@@ -15,7 +15,6 @@ ChatLog.prototype.submitMessage = function(e) {
       var $message = $('<li>').text(`${message.created_at}: ${message.message}`);
       this.$messages.append($message);
     }.bind(this)
-    debugger
   });
 };
 
